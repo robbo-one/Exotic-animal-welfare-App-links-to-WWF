@@ -1,0 +1,13 @@
+.fruit {
+  &s {
+    border: 1px solid;
+  }
+
+  &--apple {
+    color: red;
+  }
+
+  &--banana {
+    color: yellow;
+  }
+}

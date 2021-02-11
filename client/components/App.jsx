@@ -16,9 +16,9 @@ const App = (props) => {
         <div>
           {props.animals.map(animal => (
               <div key={animal.id}>
-                <img src={"/images/" + animal.type.replace(/\s/g, '') + animal.name + ".jpg"} />
+                <img height="200px" src={"/images/" + animal.type.replace(/\s/g, '') + animal.name + ".jpg"} />
 
-                <div>
+                <div >
                   {animal.name}
                 </div>
                 <div>
