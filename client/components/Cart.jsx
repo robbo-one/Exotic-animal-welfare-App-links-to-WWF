@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 
-import { fetchAnimals } from '../actions'
+import { navigate } from '../actions'
 
 function Cart (props) {
   console.log(props)
+  const returnToHomepage = () => {
+    props.dispatch(navigate('listing'))
+  }
   return (
     <>
       <div className='cart'>
@@ -32,7 +35,7 @@ function Cart (props) {
       </table>
 
       <p className='actions'>
-        <a href='#'>Continue shopping</a>      
+        <a href='#' onClick={returnToHomepage} >Continue shopping</a>      
         <button className='button-primary'>Checkout</button>
       </p>
       </div>
