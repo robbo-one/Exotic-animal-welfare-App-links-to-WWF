@@ -1,50 +1,32 @@
 import React, { useState, useEffect } from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
+import List from './List'
+// import Cart from './Cart'
 
 import { fetchAnimals } from '../actions'
 
-const App = (props) => {
+function App () {
 
-  useEffect(() => {
-    props.dispatch(fetchAnimals());
-  }, []);
+  // useEffect(() => {
+  //   props.dispatch(fetchAnimals());
+  // }, []);
 
   return (
     <>
-      <div className='app'>
-        <h1>Look at our exotic animals!</h1>
-        <div>
-          {props.animals.map(animal => (
-              <div key={animal.id}>
-                <img src={"/images/" + animal.type.replace(/\s/g, '') + animal.name + ".jpg"} />
-
-                <div>
-                  {animal.name}
-                </div>
-                <div>
-                  {animal.type}
-                </div>
-                <div>
-                  {animal.location}
-                </div>
-                <div>
-                  {animal.price}
-                </div>
-
-              </div>
-          ))}
-        </div>
-
-
+    <div className='app'>
+      
+      <List />
+      {/* <Cart /> */}
+     
       </div>
     </>
   )
 }
-const mapStateToProps = (globalState) => {
-  return {
-    animals: globalState.animals
-  }
-};
+// const mapStateToProps = (globalState) => {
+//   return {
+//     animals: globalState.animals
+//   }
+// };
 
-export default connect(mapStateToProps)(App)
+export default App
 
