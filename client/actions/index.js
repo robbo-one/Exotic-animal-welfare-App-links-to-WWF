@@ -1,7 +1,7 @@
 import { getAnimals } from '../apis/animals'
 
 export const SET_ANIMALS = 'SET_ANIMALS'
-export const ADD_TO_CART = 'ADD_TO_CART'
+// export const ADD_TO_CART = 'ADD_TO_CART'
 
 export function setAnimals (animals) {
   return {
@@ -12,11 +12,12 @@ export function setAnimals (animals) {
 
 export const ADD_ANIMAL_TO_CART = 'ADD_ANIMAL_TO_CART'
 
-export function addAnimalToCart (id, name) {
+export function addAnimalToCart (id, name, price) {
   return {
     type: ADD_ANIMAL_TO_CART,
     id: id,
-    name: name
+    name: name,
+    price: price
   }
 }
 
