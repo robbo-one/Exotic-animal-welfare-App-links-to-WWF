@@ -8,7 +8,7 @@ function Cart (props) {
   const returnToHomepage = () => {
     props.dispatch(navigate('listing'))
   }
-  return (
+   return (
     <>
       <div className='cart'>
       <table>
@@ -36,7 +36,7 @@ function Cart (props) {
 
       <p className='actions'>
         <a href='#' onClick={returnToHomepage} >Continue shopping</a>      
-        <button className='button-primary'>Checkout</button>
+        <a href="https://www.worldwildlife.org/"> <button className='button-primary' >Checkout</button></a>
       </p>
       </div>
     </>
