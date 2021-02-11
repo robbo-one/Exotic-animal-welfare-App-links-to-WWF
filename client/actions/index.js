@@ -10,6 +10,27 @@ export function setAnimals (animals) {
   }
 }
 
+export const ADD_ANIMAL_TO_CART = 'ADD_ANIMAL_TO_CART'
+
+export function addAnimalToCart (id, name) {
+  return {
+    type: ADD_ANIMAL_TO_CART,
+    id: id,
+    name: name
+  }
+}
+
+export const REMOVE_ANIMAL_FROM_CART = 'REMOVE_ANIMAL_FROM_CART'
+
+export function removeAnimalFromCart (id) {
+  return {
+    type: REMOVE_ANIMAL_FROM_CART,
+    id: id
+  }
+}
+
+
+
 export function fetchAnimals () {
   return dispatch => {
     return getAnimals()
@@ -21,10 +42,12 @@ export function fetchAnimals () {
   }
 }
 
-export function addToCart (id, name) {
+export const NAVIGATE = 'NAVIGATE'
+
+export function navigate (target) {
   return {
-    type: ADD_TO_CART,
-    id: id,
-    name: name,
+    type: NAVIGATE,
+    target: target
+    
   }
 }
