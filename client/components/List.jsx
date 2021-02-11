@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 
-import { fetchAnimals } from '../actions'
+import { fetchAnimals, addAnimalToCart, navigate } from '../actions'
 
 function List (props) {
 
@@ -9,15 +9,17 @@ function List (props) {
     props.dispatch(fetchAnimals());
   }, []);
   
+    const addToCart = (id, name) => {
+      props.dispatch(addAnimalToCart(id, name))
+      props.dispatch(navigate('cart'))
+    }
   return (
-    
       <div className='list'>
-        
         <h1>Look at our exotic animals!</h1>
         <div>
           {props.animals.map(animal => (
             <div key={animal.id}>
-              <img src={"/images/" + animal.type.replace(/\s/g, '') + animal.name + ".jpg"} />
+              <img height="200px" src={"/images/" + animal.type.replace(/\s/g, '') + animal.name + ".jpg"} />
 
               <div>
                 {animal.name}
@@ -31,7 +33,7 @@ function List (props) {
               <div>
                 {animal.price}
               </div>
-
+              <button onClick={()=>{addToCart(animal.id, animal.name)}}>+</button>
             </div>
           ))}
         </div>
@@ -41,7 +43,6 @@ function List (props) {
           }
 
    const mapStateToProps = (globalState) => {
-     console.log(globalState)
   return {
     animals: globalState.animals
   }

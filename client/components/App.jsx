@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from 'react'
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import List from './List'
-// import Cart from './Cart'
+import Cart from './Cart'
 
-import { fetchAnimals } from '../actions'
 
-function App () {
-
-  // useEffect(() => {
-  //   props.dispatch(fetchAnimals());
-  // }, []);
-
+function App (props) {
+console.log("props", props)
   return (
     <>
     <div className='app'>
       
-      <List />
-      {/* <Cart /> */}
+      { props.activePage == 'listing' ? <List /> : <Cart />}
      
       </div>
     </>
   )
 }
-// const mapStateToProps = (globalState) => {
-//   return {
-//     animals: globalState.animals
-//   }
-// };
+const mapStateToProps = (globalState) => {
+  return {
+    activePage: globalState.activePage
+  }
+};
 
-export default App
+export default connect(mapStateToProps)(App)
 

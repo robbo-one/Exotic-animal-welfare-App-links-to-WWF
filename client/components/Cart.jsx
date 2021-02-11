@@ -12,6 +12,7 @@ function Cart () {
       <h1>Your shopping cart:</h1>
       </div>
     </>
+  )
 }
 
 export default Cart

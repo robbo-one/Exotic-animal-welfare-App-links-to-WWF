@@ -29,19 +29,6 @@ export function removeAnimalFromCart (id) {
   }
 }
 
-
-
-export function fetchAnimals () {
-  return dispatch => {
-    return getAnimals()
-      .then(animals => {
-        console.log(animals)
-        dispatch(setAnimals(animals))
-        return null
-      })
-  }
-}
-
 export const NAVIGATE = 'NAVIGATE'
 
 export function navigate (target) {
@@ -51,3 +38,15 @@ export function navigate (target) {
     
   }
 }
+
+
+export function fetchAnimals () {
+  return dispatch => {
+    return getAnimals()
+      .then(animals => {
+        dispatch(setAnimals(animals))
+        return null
+      })
+  }
+}
+
