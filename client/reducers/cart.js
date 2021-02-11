@@ -1,4 +1,4 @@
-import { ADD_ANIMAL_TO_CART } from '../actions'
+import { ADD_ANIMAL_TO_CART, REMOVE_ANIMAL_FROM_CART } from '../actions'
 
 const initialState = []
 
