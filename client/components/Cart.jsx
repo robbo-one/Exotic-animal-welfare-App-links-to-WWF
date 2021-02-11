@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 
-import { navigate } from '../actions'
+import { navigate, removeAnimalFromCart } from '../actions'
 
 function Cart (props) {
   console.log(props)
   const returnToHomepage = () => {
     props.dispatch(navigate('listing'))
+  }
+  const deleteItem = (id) => {
+    props.dispatch(removeAnimalFromCart(id))
   }
    return (
     <>
@@ -27,7 +30,7 @@ function Cart (props) {
                 
                 <td>{price}</td>
                 {/* TODO: implement deletes */}
-                <td><button><span className='fa fa-trash fa-2x' />Delete</button></td>
+                <td><button onClick={() => deleteItem(id)}><span className='fa fa-trash fa-2x' />Delete</button></td>
               </tr>
             )
           })}
