@@ -27,12 +27,11 @@ function Cart (props) {
           </tr>
         </thead>
         <tbody>
-          {props.cart.map(({ id, name, type, price }) => {
+          {props.cart.map(({ id, name, price }) => {
             return (
               
               <tr key={id}>
                 <td>{name}</td>
-                <td>{type}</td>
                 <td>{price}</td>
                 {/* TODO: implement deletes */}
                 <td><button onClick={() => deleteItem(id)}><span className='fa fa-trash fa-2x' />Delete</button></td>
