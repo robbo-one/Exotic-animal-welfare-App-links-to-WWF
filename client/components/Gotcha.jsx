@@ -25,8 +25,9 @@ function Cart (props) {
 
     <h1>What were you thinking? That is super illegal. </h1>
 
-    <a href="https://www.endangeredspecies.org.nz/act-now/donate" ><button>I'm Sorry..</button></a> 
+    <a href="https://www.endangeredspecies.org.nz/act-now/donate" ><button id="sorry">I'm Sorry..</button></a> 
 
+      </div>
       </div>
     </>
   )
