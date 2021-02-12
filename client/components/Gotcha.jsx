@@ -12,18 +12,30 @@ function Cart (props) {
    return (
     <>
       <div className='gotcha'>
-     <h1> Wait, seriously? You tried to buy:</h1>  
+        <div>
+          <h1> Wait, seriously? You tried to buy:</h1>  
+        </div>
+        <div className="table">
           {props.cart.map(({ id, name }) => {
             return (
+              
               <tr key={id}>
-                <td>{name}</td>
+                <td className="petName">{name}</td>
                 {/* TODO: implement deletes */}
               </tr>
+              
+              
             )
           })}
-    <h1>What were you thinking? That is super illegal. </h1>
-
-    <button onClick={returnToHomepage}>I'm Sorry..</button> 
+          </div>
+    <div>
+      <h1>What were you thinking? That is super illegal. </h1>
+    </div>
+    
+    <div>
+      <button id="sorry" onClick={returnToHomepage}>I'm sorry ...</button>
+    </div>
+     
 
     
       </div>
