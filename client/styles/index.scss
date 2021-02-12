@@ -5,5 +5,126 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  
+  background-color:  white;
+  
+ 
+}
+
+.homeTitle {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 60px;
+  font-family: 'Arsenal', sans-serif;
+  color: rgb(212, 141, 9);
+  letter-spacing: 10px;
+}
+
+
+.animalListing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  padding: 0 60px;
+ font-family: 'Lobster', cursive;
+ font-size: 20px;
+}
+.animalListingggs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.animalWrap {
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto;
+  
+
+}
+
+.animalsForSale {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.animalImg {
+border: 20px solid darkgoldenrod;
+height: auto;
+  width: 400px;
+
+}
+
+.addToCartButton {
+  background:black;
+  color:white;
+  font-family: 'Audiowide', cursive;
+  font-size: 25px;
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  border: 5px solid rgb(51, 184, 11);
+}
+
+.buttonDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sale {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  color: red;
+  font-size: 80px;
+  background:green;
+  margin-top:0px;
+}
+
+footer {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import './fruit.scss'
+
 
