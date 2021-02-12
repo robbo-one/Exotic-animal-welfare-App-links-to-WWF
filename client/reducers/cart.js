@@ -8,7 +8,6 @@ const reducer = (state = initialState, action) => {
       return [...state,{
         id : action.id,
         name: action.name,
-        price: action.price,
         quantity: 1
       } ]
     
