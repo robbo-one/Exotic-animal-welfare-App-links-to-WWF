@@ -9,8 +9,8 @@ function List (props) {
     props.dispatch(fetchAnimals());
   }, []);
   
-    const addToCart = (id, name, price) => {
-      props.dispatch(addAnimalToCart(id, name, price))
+    const addToCart = (id, name, price, type) => {
+      props.dispatch(addAnimalToCart(id, name, price, type))
       props.dispatch(navigate('cart'))
     }
   return (
@@ -28,12 +28,12 @@ function List (props) {
                 <br></br>
                 <h3> Origin: {animal.location} </h3>
                 <br></br>
-                <h3> Price $ {animal.price} </h3>
+                <h3> Price: $ {animal.price} </h3>
                 <br></br>
               
               </div>
               <div className="buttonDiv">
-              <button className="addToCartButton"  onClick={()=>{addToCart(animal.id, animal.name)}}>Add to Cart</button>
+              <button className="addToCartButton"  onClick={()=>{addToCart(animal.id, animal.name, animal.price, animal.type)}}>Add to Cart</button>
               </div>
 
             </div>
