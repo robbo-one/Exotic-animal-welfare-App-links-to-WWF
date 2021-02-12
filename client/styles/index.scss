@@ -100,11 +100,40 @@ footer {
 }
 
 
+.gotcha {
+  text-align: center;
+  color:rgb(51, 184, 11);
+  font-size: 40px;
+  padding: 10px;
+  background-color:white;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  color: red;
+  flex-direction: column;
+}
+
+.petName {
+  font-size: 100px;
+}
+
+#sorry {
+  height: 50px;
+  width: 200px;
+  font-size: 30px;
+  background-color: rgb(1, 1, 102);
+  color: whitesmoke;
+  border-radius:  10px;
+}
 
 
+#names {
+display:flex;
+flex-direction: column;
 
-
-
+}
 
 
 

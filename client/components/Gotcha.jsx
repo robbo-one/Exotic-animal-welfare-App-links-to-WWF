@@ -12,20 +12,21 @@ function Cart (props) {
    return (
     <>
       <div className='gotcha'>
-     <h1> Wait, seriously? You tried to buy:</h1>  
+        <div>
+          <h1> Wait, seriously? You tried to buy:</h1>  
+        </div>
+        <div className="table">
           {props.cart.map(({ id, name }) => {
             return (
-              <tr key={id}>
-                <td>{name}</td>
-                {/* TODO: implement deletes */}
-              </tr>
+                <div key={id} className="petName">{name}  </div> 
+      
             )
           })}
+
     <h1>What were you thinking? That is super illegal. </h1>
 
     <a href="https://www.endangeredspecies.org.nz/act-now/donate" ><button>I'm Sorry..</button></a> 
 
-    
       </div>
     </>
   )
