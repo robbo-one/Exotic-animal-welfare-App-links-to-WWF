@@ -18,13 +18,8 @@ function Cart (props) {
         <div className="table">
           {props.cart.map(({ id, name }) => {
             return (
-              
-              <tr key={id}>
-                <td className="petName">{name}</td>
-                {/* TODO: implement deletes */}
-              </tr>
-              
-              
+                <div key={id} className="petName">{name}  </div> 
+      
             )
           })}
           </div>

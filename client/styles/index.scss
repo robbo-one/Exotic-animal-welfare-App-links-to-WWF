@@ -102,15 +102,15 @@ footer {
   text-align: center;
   color:rgb(51, 184, 11);
   font-size: 40px;
-  padding: 100px;
+  padding: 10px;
   background-color:white;
 }
 
 .table {
   display: flex;
   justify-content: center;
-  padding: 50px;
   color: red;
+  flex-direction: column;
 }
 
 .petName {
@@ -127,7 +127,11 @@ footer {
 }
 
 
+#names {
+display:flex;
+flex-direction: column;
 
+}
 
 
 
