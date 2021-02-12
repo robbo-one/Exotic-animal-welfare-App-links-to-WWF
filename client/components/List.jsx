@@ -35,7 +35,7 @@ function List (props) {
               <div className="buttonDiv">
               <button className="addToCartButton"  onClick={()=>{addToCart(animal.id, animal.name)}}>Add to Cart</button>
               </div>
-              <button onClick={()=>{addToCart(animal.id, animal.name, animal.price)}}>+</button>
+
             </div>
           ))}
         </div>
