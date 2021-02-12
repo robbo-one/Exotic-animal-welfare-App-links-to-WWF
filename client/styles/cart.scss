@@ -1,0 +1,64 @@
+
+  body {background-image: url('https://images.pexels.com/photos/2757549/pexels-photo-2757549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+background-repeat: no-repeat;
+background-size: cover;
+  }
+td {
+  width: 100px;
+}
+.cart {
+  display:flex;
+ background-color:black;
+ color:white;
+ font-size:25px;
+ padding:30px;
+ 
+ justify-content: center;
+
+ }
+
+ .body2 {
+   height: 95vh;
+   width:95vw;
+   display:flex;
+  justify-content: center;
+  align-items:center
+
+ }
+.cart table {
+  width: 300px;
+}
+.cart .update-input {
+  width: 40px;
+  text-align: center;
+  margin-bottom: 0px; /* skeleton override */
+}
+
+.cart tbody button {
+  border: 0;
+  padding-top: 10px;
+  background-color:red;
+  color:black;
+  border: 5px solid rgb(51, 184, 11);
+}
+
+.cart .actions {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 100px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+a {
+  
+  color:blue;
+  font-weight: bold;
+}

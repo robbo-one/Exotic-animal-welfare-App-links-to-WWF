@@ -16,9 +16,9 @@ function Cart (props) {
     props.dispatch(navigate('Gotcha'))
   }
    return (
-    <>
+    <div className="body2">
       <div className='cart'>
-      <table>
+      <table className="styled-table">
         <thead>
           <tr>
             <td>Name</td>
@@ -32,7 +32,7 @@ function Cart (props) {
               
               <tr key={id}>
                 <td>{name}</td>
-                <td>{price}</td>
+                <td>${price}</td>
                 {/* TODO: implement deletes */}
                 <td><button onClick={() => deleteItem(id)}><span className='fa fa-trash fa-2x' />Delete</button></td>
               </tr>
@@ -46,7 +46,7 @@ function Cart (props) {
         <button onClick={goToGotcha} className='button-primary' >Checkout</button>
       </p>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ import { navigate, removeAnimalFromCart } from '../actions'
 function Cart (props) {
   console.log(props)
   const returnToHomepage = () => {
-    props.dispatch(navigate('listing'))
+    <a ></a>
   }
 
    return (
@@ -22,17 +22,11 @@ function Cart (props) {
       
             )
           })}
-          </div>
-    <div>
-      <h1>What were you thinking? That is super illegal. </h1>
-    </div>
-    
-    <div>
-      <button id="sorry" onClick={returnToHomepage}>I'm sorry ...</button>
-    </div>
-     
 
-    
+    <h1>What were you thinking? That is super illegal. </h1>
+
+    <a href="https://www.endangeredspecies.org.nz/act-now/donate" ><button>I'm Sorry..</button></a> 
+
       </div>
     </>
   )
