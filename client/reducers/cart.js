@@ -13,9 +13,9 @@ const reducer = (state = initialState, action) => {
       } ]
     
         case REMOVE_ANIMAL_FROM_CART:
-          return state.filter(animal => {
+          return state.filter(animal => 
             animal.id !== action.id 
-          })
+          )
     default:
       return state
   }
